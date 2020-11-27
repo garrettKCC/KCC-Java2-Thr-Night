@@ -17,7 +17,7 @@ public class AnimalDAOFactory {
         AnimalDAO dao = null;
         switch (DAO_SOURCE) {
             case "CSV":
-                dao = new AnimalDAOCSV();
+                //dao = new AnimalDAOCSV();
                 break;
             case "XML":
                 break;

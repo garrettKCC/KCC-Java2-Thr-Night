@@ -7,7 +7,8 @@ Diagrams provide a visual representation of a process.  Diagrams are tools that
 allow the designer to think through the process more clearly and identify any gaps
 in understanding.  They allow designers to communicate with users to make sure there
 is a common understanding, before doing a lot of work.
-While UML can be very 
+While UML can be very detailed and in-depth, it can be used at a high level to
+provide a description of the main functionality of the system.
 
 ## UML Diagrams
 
@@ -16,7 +17,7 @@ While UML can be very
 
 
 ### Sequence Diagram
-
+![Sequence Diagram](UML_Diagrams/Animal_Sequence_Diagram.svg)
 
 ### Class Diagram
 ![Class Diagram](UML_Diagrams/Animal_Class_Diagram.svg)
