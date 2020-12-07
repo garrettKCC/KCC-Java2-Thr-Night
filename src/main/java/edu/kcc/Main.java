@@ -1,20 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.kcc;
 
 import edu.kcc.ui.UIUtility;
 import edu.kcc.animal.Animal;
+import edu.kcc.taskhandler.FindAnimal;
+import java.net.Socket;
 
 /**
  *
- * @author k0519415
- * @author Nathaniel Webber
+ * @author 
+ * @author 
  */
 public class Main {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -23,14 +20,12 @@ public class Main {
         
         String menuTitle = "Main Menu";
         String[] menuOptions = {
-            "1) Add an Animal",
-            "2) Find an Animal",
-            "3) Show All Animals",
-            "4) Update an Animal",
-            "5) Delete an Animal",
-            "6) Exit"
+            "1) Find an Animal",
+            "2) Show Lookup History",
+            "3) Exit"
         };
         String prompt = "Your choice:";
+        
         String errorMessage = "Invalid option.  Please try again.";
         String userChoice;
         // AnimalDAO dao = AnimalDAO.getAnimalDAO();
@@ -38,28 +33,18 @@ public class Main {
         boolean working = true;
         while(working) {
             userChoice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions);
+            //returns userChoice as a String
             switch(userChoice) {
                 case "1":
-                    // Add an Animal
-                    System.out.println("You added an Animal");
+                    // Find an Animal
+                    //prompt user for name of an animal
+                    new FindAnimal().handleTask();
                     break;
                 case "2":
-                    // Find an Animal
-                    System.out.println("You found the Animal");
+                    // Show Lookup History
+                    System.out.println("Here is your Lookup History");
                     break;
                 case "3":
-                    // Show all Animals
-                    System.out.println("You're looking at all the Animals");
-                    break;
-                case "4":
-                    // Update an Animal
-                    System.out.println("You have updated the Animal");
-                    break;
-                case "5":
-                    // Delete an Animal
-                    System.out.println("You have deleted the Animal");
-                    break;
-                case "6":
                     working = false;
                     break;
                 default:
